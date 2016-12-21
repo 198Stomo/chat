@@ -1,0 +1,14 @@
+<h1>Chat room</h1>
+
+<form>
+  <label>なんでもおk:</label><br>
+  <input id='post-message' type="text" data-behavior="room_speaker" data-user-id=<%=current_user.id%> >
+</form>
+
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<div>
+   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+</div>
